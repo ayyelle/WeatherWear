@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#E6F3FF">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit!"
+        android:id="@+id/button"
+        android:onClick="buttonOnClick"
+        android:layout_below="@+id/city"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/clothingList"
+        android:elegantTextHeight="false"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/genderSelect"
+        android:textSize="17dp"
+        android:layout_toStartOf="@+id/textView"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentBottom="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/city"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp"
+        android:layout_toStartOf="@+id/clothingList"
+        android:layout_toLeftOf="@+id/clothingList"
+        android:hint="Enter city"
+        android:inputType="text"
+        android:layout_alignRight="@+id/country"
+        android:layout_alignEnd="@+id/country"
+        android:textColor="#29A3A3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/country"
+        android:layout_below="@+id/city"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button"
+        android:hint="Enter country"
+        android:textColor="#29A3A3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/genderSelect"
+        android:layout_below="@+id/country"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button"
+        android:hint="Enter female, male or unisex"
+        android:textColor="#29A3A3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="WeatherWear"
+        android:id="@+id/textView"
+        android:textColor="#3D0066"
+        android:textSize="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/currentWeatherDeclaration"
+        android:layout_below="@+id/genderSelect"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:text="Enter your location, and we&apos;ll recommend weather-appropriate outfits!!!! "
+        android:backgroundTint="#C2E0FF"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayPic"
+        android:src="@drawable/sun_pic"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/currentWeatherDeclaration"
+        android:minWidth="200dp"
+        android:minHeight="200dp"
+        android:nestedScrollingEnabled="true" />
+
+</RelativeLayout>
